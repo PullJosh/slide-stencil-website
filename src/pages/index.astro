@@ -1,17 +1,111 @@
 ---
-
+import Center from "../components/Center.astro";
+import { HomepageDemo } from "../components/HomepageDemo";
+import logo from "../images/logo.svg";
+import josh from "../images/josh.jpg";
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Slide Stencil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900,50&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-amber-50">
+    <header class="py-4">
+      <Center class:list="flex items-center">
+        <a href="/" class="flex items-center gap-3 hover:underline">
+          <img src={logo.src} class="size-14" />
+          <div class="font-bold text-2xl">Slide Stencil</div>
+        </a>
+        <a href="https://mrpullen.com/" class="text-2xl ml-2 hover:underline"
+          >by Mr. Pullen</a
+        >
+        <a
+          href="#"
+          class="ml-auto block bg-amber-300 text-amber-950 text-lg px-6 py-3 rounded-lg hover:bg-amber-400 hover:scale-110 hover:-rotate-1 active:bg-amber-500 active:scale-95 active:rotate-1 transform transition"
+          >Install Add-on</a
+        >
+      </Center>
+    </header>
+    <div class="py-8">
+      <Center>
+        <!-- <div class="font-mono mb-4 text-sm">
+          <p>Right click &rarr; duplicate.</p>
+          <p>Right click &rarr; duplicate.</p>
+          <p>Right click &rarr; duplicate.</p>
+          <p><em>Enough is enough.</em></p>
+        </div> -->
+        <h1 class="text-4xl leading-tight">
+          <strong class="font-bold">
+            Generate all your slides in one click.
+          </strong> Use your own design & data.
+        </h1>
+      </Center>
+    </div>
+    <div class="py-8">
+      <Center width="large">
+        <HomepageDemo client:load />
+      </Center>
+    </div>
+    <div class="py-8">
+      <Center
+        class="flex items-center justify-between text-center gap-4 flex-col lg:flex-row"
+      >
+        <a
+          href="#"
+          class="block bg-amber-300 text-amber-950 text-2xl px-8 py-4 rounded-xl hover:bg-amber-400 hover:scale-110 hover:-rotate-1 active:bg-amber-500 active:scale-95 active:rotate-1 transform transition"
+        >
+          Install Google Slides Add-On
+        </a>
+        <p class="text-lg text-gray-800">
+          There's nothing better than just getting started!
+        </p>
+      </Center>
+    </div>
+    <div class="py-8">
+      <Center class="grid grid-cols-[2fr_1fr] gap-8">
+        <div>
+          <h2 class="font-bold text-2xl mb-2">
+            Software by a teacher, for teachers
+          </h2>
+          <p class="mb-2 text-xl leading-relaxed">
+            Hello! I'm Josh Pullen, and this is my teacher-neighbor Ellen.
+          </p>
+          <p class="mb-2 text-xl leading-relaxed">
+            Ellen came to me in the spring of 2026 with a problem: She was
+            spending too much time creating vocab slides for her class. The
+            slides were great, but setting them up was tedious. She asked if
+            there was any good solution, but I couldn't find one. I can't resist
+            a challenge, so I built Slide Stencil.
+          </p>
+          <p class="mb-2 text-xl leading-relaxed">
+            This isn't my first go-round building apps for teachers. <a
+              href="https://mrpullen.com/"
+              class="font-semibold underline hover:decoration-dashed"
+              >It's kind of my thing.</a
+            >
+          </p>
+        </div>
+        <a href="https://mrpullen.com/">
+          <img
+            src={josh.src}
+            width={josh.width}
+            height={josh.height}
+            class="rounded-xl hover:-rotate-2 hover:scale-105 hover:shadow-xl active:rotate-1 active:scale-95 active:shadow transition"
+          />
+        </a>
+      </Center>
+    </div>
+  </body>
 </html>
