@@ -49,7 +49,7 @@ export function HomepageDemo() {
   const [rows, setRows] = useState(defaultRows);
 
   return (
-    <div class="grid grid-cols-[1fr_auto_1fr_auto_1fr] grid-rows-[auto_auto] items-center">
+    <div className="grid max-w-xs mx-auto gap-y-4 grid-rows-[auto_auto_auto_auto_auto] md:max-w-none md:grid-cols-[1fr_auto_1fr_auto_1fr] md:grid-rows-[auto] items-center">
       <div>
         <HomepageSlide
           data={{
@@ -58,23 +58,24 @@ export function HomepageDemo() {
             warmUp: "{{Warm Up}}",
           }}
         />
+        <div className="font-bold text-center mt-3">Template Slide</div>
       </div>
-      <div class="text-3xl p-4">+</div>
+      <div className="text-3xl p-4 text-center hidden md:block">
+        <span className="block -mt-3 mb-3">+</span>
+      </div>
       <div>
-        <div class="@container overflow-auto border border-stone-300 rounded bg-white aspect-video">
+        <div className="@container overflow-auto border border-stone-300 rounded bg-white aspect-video">
           <HomepageTable rows={rows} setRows={setRows} />
         </div>
+        <div className="font-bold text-center mt-3">Data</div>
       </div>
-      <div class="text-3xl p-4">=</div>
+      <div className="text-3xl p-4 text-center hidden md:block">
+        <span className="block -mt-3 mb-3">=</span>
+      </div>
       <div>
         <HomepageSlideStack rows={rows} />
+        <div className="font-bold text-center mt-3">Generated Slides</div>
       </div>
-
-      <div class="font-bold text-center mt-4 self-start">Template Slide</div>
-      <div></div>
-      <div class="font-bold text-center mt-4 self-start">Data</div>
-      <div></div>
-      <div class="font-bold text-center mt-4 self-start">Generated Slides</div>
     </div>
   );
 }

@@ -10,7 +10,7 @@ interface HomepageTableProps {
 
 export function HomepageTable({ rows, setRows }: HomepageTableProps) {
   return (
-    <table className="border-collapse text-sm min-h-full">
+    <table className="border-collapse text-xs @xs:text-sm min-h-full">
       <thead>
         <tr>
           <th className="bg-stone-100 border border-stone-300 px-2 py-1 border-l-0 border-t-0">

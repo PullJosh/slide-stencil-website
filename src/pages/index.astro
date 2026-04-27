@@ -24,16 +24,24 @@ import "../styles/global.css";
   <body class="bg-amber-50">
     <header class="py-4">
       <Center class:list="flex items-center">
-        <a href="/" class="flex items-center gap-3 hover:underline">
-          <img src={logo.src} class="size-14" />
-          <div class="font-bold text-2xl">Slide Stencil</div>
-        </a>
-        <a href="https://mrpullen.com/" class="text-2xl ml-2 hover:underline"
-          >by Mr. Pullen</a
+        <div
+          class="grid gap-x-3 items-center grid-cols-[auto_auto] grid-rows-2 sm:grid-cols-[auto_auto_auto] sm:grid-rows-1 whitespace-nowrap"
         >
+          <a href="/" class="row-span-2 sm:row-span-1">
+            <img src={logo.src} class="size-14" />
+          </a>
+          <a href="/" class="leading-tight font-bold text-2xl hover:underline">
+            Slide Stencil
+          </a>
+          <a
+            href="https://www.joshuapullen.com/"
+            class="leading-tight text-lg sm:text-2xl hover:underline"
+            >by Mr. Pullen</a
+          >
+        </div>
         <a
           href="#"
-          class="ml-auto block bg-amber-300 text-amber-950 text-lg px-6 py-3 rounded-lg hover:bg-amber-400 hover:scale-110 hover:-rotate-1 active:bg-amber-500 active:scale-95 active:rotate-1 transform transition"
+          class="ml-auto hidden sm:block bg-amber-300 text-amber-950 text-lg px-6 py-3 rounded-lg hover:bg-amber-400 hover:scale-110 hover:-rotate-1 active:bg-amber-500 active:scale-95 active:rotate-1 transform transition"
           >Install Add-on</a
         >
       </Center>
@@ -46,7 +54,7 @@ import "../styles/global.css";
           <p>Right click &rarr; duplicate.</p>
           <p><em>Enough is enough.</em></p>
         </div> -->
-        <h1 class="text-4xl leading-tight">
+        <h1 class="text-4xl leading-tight text-center md:text-left">
           <strong class="font-bold">
             Generate all your slides in one click.
           </strong> Use your own design & data.
@@ -66,7 +74,7 @@ import "../styles/global.css";
           href="#"
           class="block bg-amber-300 text-amber-950 text-2xl px-8 py-4 rounded-xl hover:bg-amber-400 hover:scale-110 hover:-rotate-1 active:bg-amber-500 active:scale-95 active:rotate-1 transform transition"
         >
-          Install Google Slides Add-On
+          Install Google Slides <span class="whitespace-nowrap">Add-On</span>
         </a>
         <p class="text-lg text-gray-800">
           There's nothing better than just getting started!
@@ -74,8 +82,16 @@ import "../styles/global.css";
       </Center>
     </div>
     <div class="py-8">
-      <Center class="grid grid-cols-[2fr_1fr] gap-8">
-        <div>
+      <Center class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8">
+        <a href="https://www.joshuapullen.com/" class="md:col-start-2">
+          <img
+            src={josh.src}
+            width={josh.width}
+            height={josh.height}
+            class="rounded-full size-32 object-cover object-top md:w-full md:h-auto md:rounded-xl hover:-rotate-2 hover:scale-105 hover:shadow-xl active:rotate-1 active:scale-95 active:shadow transition"
+          />
+        </a>
+        <div class="md:col-start-1 md:row-start-1">
           <h2 class="font-bold text-2xl mb-2">
             Software by a teacher, for teachers
           </h2>
@@ -89,22 +105,15 @@ import "../styles/global.css";
             there was any good solution, but I couldn't find one. I can't resist
             a challenge, so I built Slide Stencil.
           </p>
+          <hr class="border-gray-300 my-8" />
           <p class="mb-2 text-xl leading-relaxed">
             This isn't my first go-round building apps for teachers. <a
-              href="https://mrpullen.com/"
+              href="https://www.joshuapullen.com/"
               class="font-semibold underline hover:decoration-dashed"
               >It's kind of my thing.</a
             >
           </p>
         </div>
-        <a href="https://mrpullen.com/">
-          <img
-            src={josh.src}
-            width={josh.width}
-            height={josh.height}
-            class="rounded-xl hover:-rotate-2 hover:scale-105 hover:shadow-xl active:rotate-1 active:scale-95 active:shadow transition"
-          />
-        </a>
       </Center>
     </div>
   </body>
