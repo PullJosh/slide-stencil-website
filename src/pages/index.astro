@@ -1,121 +1,90 @@
 ---
 import Center from "../components/Center.astro";
 import { HomepageDemo } from "../components/HomepageDemo";
-import logo from "../images/logo.svg";
 import joshAndEllen from "../images/josh-and-ellen.jpeg";
-import "../styles/global.css";
+import Layout from "../components/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Slide Stencil</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900,50&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="bg-amber-50">
-    <header class="py-4">
-      <Center class:list="flex items-center">
-        <div
-          class="grid gap-x-3 items-center grid-cols-[auto_auto] grid-rows-2 sm:grid-cols-[auto_auto_auto] sm:grid-rows-1 whitespace-nowrap"
-        >
-          <a href="/" class="row-span-2 sm:row-span-1">
-            <img src={logo.src} class="size-14" />
-          </a>
-          <a href="/" class="leading-tight font-bold text-2xl hover:underline">
-            Slide Stencil
-          </a>
-          <a
-            href="https://www.joshuapullen.com/"
-            class="leading-tight text-lg sm:text-2xl hover:underline"
-          >
-            by Mr. Pullen
-          </a>
-        </div>
-        <a
-          href="#"
-          class="ml-auto hidden sm:block bg-amber-300 text-amber-950 text-lg px-6 py-3 rounded-lg hover:bg-amber-400 hover:scale-110 hover:-rotate-1 active:bg-amber-500 active:scale-95 active:rotate-1 transform transition"
-        >
-          Install Add-on
-        </a>
-      </Center>
-    </header>
-    <div class="py-8">
-      <Center>
-        <h1 class="text-4xl leading-tight text-center md:text-left">
-          <strong class="font-bold">
-            Generate all your slides in one click.
-          </strong> Use your own design & data.
-        </h1>
-      </Center>
-    </div>
-    <div class="py-8">
-      <Center width="large">
-        <HomepageDemo client:load />
-      </Center>
-    </div>
-    <div class="py-8">
-      <Center
-        class="flex items-center justify-between text-center gap-4 flex-col lg:flex-row"
+<Layout>
+  <link slot="head" rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    slot="head"
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    slot="head"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900,50&display=swap"
+    rel="stylesheet"
+  />
+  <div class="py-8">
+    <Center>
+      <h1 class="text-4xl leading-tight text-center md:text-left">
+        <strong class="font-bold">
+          Generate all your slides in one click.
+        </strong> Use your own design & data.
+      </h1>
+    </Center>
+  </div>
+  <div class="py-8">
+    <Center width="large">
+      <HomepageDemo client:load />
+    </Center>
+  </div>
+  <div class="py-8">
+    <Center
+      class="flex items-center justify-between text-center gap-4 flex-col lg:flex-row"
+    >
+      <a
+        href="#"
+        class="block bg-amber-300 text-amber-950 text-2xl px-8 py-4 rounded-xl hover:bg-amber-400 hover:scale-110 hover:-rotate-1 active:bg-amber-500 active:scale-95 active:rotate-1 transform transition"
       >
-        <a
-          href="#"
-          class="block bg-amber-300 text-amber-950 text-2xl px-8 py-4 rounded-xl hover:bg-amber-400 hover:scale-110 hover:-rotate-1 active:bg-amber-500 active:scale-95 active:rotate-1 transform transition"
-        >
-          Install Google Slides <span class="whitespace-nowrap">Add-On</span>
-        </a>
-        <p class="text-lg text-gray-800">
-          There's nothing better than just getting started!
+        Install Google Slides <span class="whitespace-nowrap">Add-On</span>
+      </a>
+      <p class="text-lg text-gray-800">
+        There's nothing better than just getting started!
+      </p>
+    </Center>
+  </div>
+  <div class="py-8">
+    <Center class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8">
+      <a href="https://www.joshuapullen.com/" class="md:col-start-2">
+        <img
+          src={joshAndEllen.src}
+          width={joshAndEllen.width}
+          height={joshAndEllen.height}
+          class="rounded-full size-32 object-cover object-bottom md:w-full md:h-auto md:rounded-xl hover:-rotate-2 hover:scale-105 hover:shadow-xl active:rotate-1 active:scale-95 active:shadow transition"
+        />
+      </a>
+      <div class="md:col-start-1 md:row-start-1">
+        <h2 class="font-bold text-2xl mb-2">
+          Software by a teacher, for teachers
+        </h2>
+        <p class="mb-2 text-xl leading-relaxed">
+          Hello! I'm Josh Pullen, and this is my teacher-neighbor Ellen.
         </p>
-      </Center>
-    </div>
-    <div class="py-8">
-      <Center class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8">
-        <a href="https://www.joshuapullen.com/" class="md:col-start-2">
-          <img
-            src={joshAndEllen.src}
-            width={joshAndEllen.width}
-            height={joshAndEllen.height}
-            class="rounded-full size-32 object-cover object-bottom md:w-full md:h-auto md:rounded-xl hover:-rotate-2 hover:scale-105 hover:shadow-xl active:rotate-1 active:scale-95 active:shadow transition"
-          />
-        </a>
-        <div class="md:col-start-1 md:row-start-1">
-          <h2 class="font-bold text-2xl mb-2">
-            Software by a teacher, for teachers
-          </h2>
-          <p class="mb-2 text-xl leading-relaxed">
-            Hello! I'm Josh Pullen, and this is my teacher-neighbor Ellen.
-          </p>
-          <p class="mb-2 text-xl leading-relaxed">
-            Ellen came to me in the spring of 2026 with a problem: She was
-            spending too much time creating vocab slides for her class. The
-            slides were great, but setting them up was tedious. She asked if
-            there was any good solution, but I couldn't find one. I can't resist
-            a challenge, so I created Slide Stencil.
-          </p>
-          <hr class="border-gray-400 my-8" />
-          <p class="mb-2 text-xl leading-relaxed">
-            I love creating apps for teachers. If you find this kind of thing
-            useful, there's a good chance you'll like my other projects too.
-          </p>
-          <div class="flex mt-4">
-            <a
-              class="bg-lime-600 text-white text-xl px-8 py-4 rounded-xl hover:bg-lime-700 active:bg-lime-800"
-              href="https://www.joshuapullen.com/"
-            >
-              More apps by Mr. Pullen &rarr;
-            </a>
-          </div>
+        <p class="mb-2 text-xl leading-relaxed">
+          Ellen came to me in the spring of 2026 with a problem: She was
+          spending too much time creating vocab slides for her class. The slides
+          were great, but setting them up was tedious. She asked if there was
+          any good solution, but I couldn't find one. I can't resist a
+          challenge, so I created Slide Stencil.
+        </p>
+        <hr class="border-gray-400 my-8" />
+        <p class="mb-2 text-xl leading-relaxed">
+          I love creating apps for teachers. If you find this kind of thing
+          useful, there's a good chance you'll like my other projects too.
+        </p>
+        <div class="flex mt-4">
+          <a
+            class="bg-lime-600 text-white text-xl px-8 py-4 rounded-lg hover:bg-lime-700 active:bg-lime-800"
+            href="https://www.joshuapullen.com/"
+          >
+            More apps by Mr. Pullen &rarr;
+          </a>
         </div>
-      </Center>
-    </div>
-  </body>
-</html>
+      </div>
+    </Center>
+  </div>
+</Layout>
