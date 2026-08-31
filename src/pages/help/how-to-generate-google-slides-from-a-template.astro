@@ -1,0 +1,177 @@
+---
+import Center from "../../components/Center.astro";
+import Layout from "../../components/Layout.astro";
+---
+
+<Layout title="How to Generate Google Slides From a Template">
+  <Center>
+    <div class="my-8">
+      <div class="mb-1">
+        <a href="/help" class="hover:underline">← Help</a>
+      </div>
+      <h1 class="text-3xl font-bold mb-8">
+        How to Generate Google Slides From a Template
+      </h1>
+
+      <figure class="mb-8">
+        <iframe
+          class="w-full aspect-video h-auto border border-gray-300 rounded-lg shadow-lg"
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/Rd0wdIux4xw?si=WR_1P8JLW1AoFqni"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+        <figcaption class="text-center text-lg text-gray-700 mt-4 italic">
+          Short demonstration video. Click to play!
+        </figcaption>
+      </figure>
+
+      <div
+        class="prose prose-code:bg-gray-100 prose-code:border prose-code:border-gray-300 prose-code:px-1 prose-code:py-px prose-code:rounded prose-code:before:content-none prose-code:after:content-none"
+      >
+        <h1 id="step-1-install-slide-stencil">Step 1: Install Slide Stencil</h1>
+        <p>
+          <a href="https://www.slidestencil.com/">Slide Stencil</a> is the Google
+          Slides Add-on I built that helps you generate Google Slides from a template.
+          To install it, open <a
+            href="https://workspace.google.com/marketplace/app/slide_stencil_by_mr_pullen/8639039219"
+            >Slide Stencil in the Google Add-on Marketplace</a
+          > and click "Install".
+        </p>
+        <h1 id="step-2-open-slide-stencil-in-google-slides">
+          Step 2: Open Slide Stencil in Google Slides
+        </h1>
+        <p>
+          Next, you'll need to open the Slide Stencil add-on in Google Slides.
+        </p>
+        <ol>
+          <li>Open your slideshow</li>
+          <li>
+            At the top, click <code
+              >Extensions &gt; Slide Stencil by Mr. Pullen &gt; Open</code
+            >
+          </li>
+          <li>
+            If requested, grant permission for the add-on to access your current
+            slideshow
+          </li>
+        </ol>
+        <h1 id="step-3-design-your-template-slide">
+          Step 3: Design your template slide
+        </h1>
+        <p>
+          Your template slide is the one that Slide Stencil will generate new
+          versions of. A template slide is a regular slide, but it contains <strong
+            >variables</strong
+          >. A variable is a slot where different content will be inserted for
+          each generated slide.
+        </p>
+        <p>
+          <a
+            href="https://docs.google.com/presentation/d/1Fx62M08AUU2krx7TC0YIE0GeqQapdAZkW1TMsUiHu3o/edit?slide=id.g3d92bf5af49_1_102#slide=id.g3d92bf5af49_1_102"
+            >See the example templates ↗</a
+          >
+        </p>
+        <p>
+          <strong
+            >To create a variable, just type double curly braces inside any text
+            box or shape.</strong
+          > For example, you can type <code>{`{{ date }}`}</code> or <code
+            >{`{{ title }}`}</code
+          > anywhere on your slide and those will become the variables "date" or "title".
+        </p>
+        <p>
+          There's nothing special about those names, either! <strong
+            >You can name your variable anything you want.</strong
+          > Whatever words you type inside the curly braces will become your column
+          name in the next step.
+        </p>
+        <p>
+          If you want to insert unique <strong>images</strong> in each generated slide
+          (not just text), <a
+            href="/help/how-to-generate-google-slides-with-images-from-a-template"
+            >see this tutorial</a
+          >.
+        </p>
+        <p>
+          <strong
+            >When you're done designing your template slide, click "Select
+            Template Slide" in the Slide Stencil sidebar on the right.</strong
+          >
+        </p>
+        <h1 id="step-4-prepare-your-template-data">
+          Step 4: Prepare your template data
+        </h1>
+        <p>
+          Now that you have your template slide prepared, we can start to think
+          about generating new versions of the template.
+        </p>
+        <p>
+          <strong
+            >In Slide Stencil, you'll put your data in a table. Each row of the
+            table will become one slide.</strong
+          >
+        </p>
+        <p>
+          After completing step 3 and clicking the "Select Template Slide"
+          button, Slide Stencil will give you an editable table where you can
+          type your data. Each template variable will become one column. Each
+          row of the table will turn into a slide.
+        </p>
+        <p>Enter your data into the table.</p>
+        <ul>
+          <li>
+            If you have any image variables, you'll need to put the image URL in
+            the cell. <a
+              href="/help/how-to-generate-google-slides-with-images-from-a-template"
+              >Learn more here.</a
+            >
+          </li>
+          <li>
+            If you want to save your data to reuse in the future, you might want
+            to connect a Google Sheet.
+          </li>
+          <li>
+            If you want to use formulas, keyboard shortcuts, or other power-user
+            features, you might want to connect a Google Sheet.
+          </li>
+        </ul>
+        <h1 id="step-5-generate-slides">Step 5: Generate Slides</h1>
+        <p>
+          This is the fun part! Once you've completed steps 1-4, all you need to
+          do is click the "Generate Slides" button. Slide Stencil will create
+          all your slides for you automatically.
+        </p>
+        <p>Generation might take a few seconds, so please be patient.</p>
+        <p>
+          If you want to make changes to your template after-the-fact, you'll
+          have to delete the generated slides, edit the template, and then
+          re-generate.
+        </p>
+        <h1 id="i-make-more-apps-to-help-teachers-">
+          I make more apps to help teachers!
+        </h1>
+        <p>
+          If you like Shuffle Buddy, you might like <a
+            href="https://www.joshuapullen.com/">the other apps I've made</a
+          >. I am always building things to help teachers.
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.shufflebuddy.com/">Shuffle Buddy</a> for classroom
+            seating charts
+          </li>
+          <li>
+            <a href="https://www.rocketspelling.com/">Rocket Spelling</a> for elementary
+            spelling practice
+          </li>
+          <li>...And <a href="https://www.joshuapullen.com/">many more</a>!</li>
+        </ul>
+        <p>Best, Josh</p>
+      </div>
+    </div>
+  </Center>
+</Layout>

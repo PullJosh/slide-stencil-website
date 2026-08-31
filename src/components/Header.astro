@@ -4,7 +4,7 @@ import logo from "../images/logo.svg";
 ---
 
 <header class="py-4">
-  <Center class:list="flex items-center">
+  <Center class:list="flex items-center gap-4">
     <div
       class="grid gap-x-3 items-center grid-cols-[auto_auto] grid-rows-2 sm:grid-cols-[auto_auto_auto] sm:grid-rows-1 whitespace-nowrap"
     >
@@ -21,11 +21,14 @@ import logo from "../images/logo.svg";
         by Mr. Pullen
       </a>
     </div>
-    <a
-      href="#"
-      class="ml-auto hidden sm:block bg-amber-300 text-amber-950 text-lg px-6 py-3 rounded-lg hover:bg-amber-400 hover:scale-110 hover:-rotate-1 active:bg-amber-500 active:scale-95 active:rotate-1 transform transition"
-    >
-      Install Add-on
-    </a>
+    <nav class="flex items-center gap-4 ml-auto">
+      <a href="/help" class="text-lg hover:underline">Help</a>
+      <a
+        href="https://workspace.google.com/marketplace/app/slide_stencil_by_mr_pullen/8639039219"
+        class="hidden text-nowrap md:block bg-amber-300 text-amber-950 text-lg px-6 py-3 rounded-lg hover:bg-amber-400 hover:scale-110 hover:-rotate-1 active:bg-amber-500 active:scale-95 active:rotate-1 transform transition"
+      >
+        Install Add-on
+      </a>
+    </nav>
   </Center>
 </header>

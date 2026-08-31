@@ -1,0 +1,55 @@
+---
+import Center from "../../components/Center.astro";
+import Layout from "../../components/Layout.astro";
+---
+
+<Layout title="Help">
+  <Center>
+    <div class="my-8">
+      <h1 class="text-3xl font-bold mb-4">Slide Stencil Help</h1>
+      <p class="text-lg mb-4 text-gray-800">
+        Hi! I'm Josh Pullen, and I built Slide Stencil. I'm here to help remove
+        tedious, repetitive slide editing from your life. If the tutorials below
+        don't answer your question, feel free to <a
+          href="https://forms.gle/p5SfTTZjS3gY9cRv6"
+          class="text-black font-bold underline">contact me</a
+        >!
+      </p>
+      <div class="grid lg:grid-cols-2 gap-4">
+        <article>
+          <a
+            href="/help/how-to-generate-google-slides-from-a-template"
+            class="block overflow-hidden bg-white active:bg-stone-100 rounded-md border border-gray-300 divide-y divide-gray-300 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <img
+              src="https://i.ytimg.com/vi/Rd0wdIux4xw/hq720.jpg"
+              alt="Visual with text 'One Template → Many Slides' showing one template slide followed by three similar slides."
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-medium">
+                How to Generate Google Slides From a Template
+              </h2>
+            </div>
+          </a>
+        </article>
+
+        <article>
+          <a
+            href="/help/how-to-generate-google-slides-with-images-from-a-template"
+            class="block overflow-hidden bg-white active:bg-stone-100 rounded-md border border-gray-300 divide-y divide-gray-300 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <img
+              src="https://i.ytimg.com/vi/kd9Uq1imcms/hq720.jpg"
+              alt="Visual with text 'One Template → Many Slides' showing one template slide followed by three similar slides."
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-medium">
+                How to Generate Slides With Images
+              </h2>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </Center>
+</Layout>
